@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConsciente | Pelo Nosso Futuro</title>
+    <meta name="description"
+        content="Projeto de conscientização ambiental com dados sobre desmatamento, queimas e reciclagem.">
+
+    <!-- Fonts: Inter for readibility, Outfit for Headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="bi bi-tree-fill"></i> Eco<span>Consciente</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-home">Home</a>
+                <a href="aquecimento.html">Aquecimento</a>
+                <a href="brasil.html">O Caso Brasil</a>
+                <a href="reciclagem.html">Reciclagem</a>
+                <a href="#equipe" class="btn-outline">Nossa Equipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container hero-content fade-in-up">
+            <span class="badge">Projeto Acadêmico</span>
+            <h1>Aja Hoje Para<br><span class="highlight-text">Garantir o Amanhã</span></h1>
+            <p>O planeta clama por ajuda. Entenda como o aquecimento global, o desmatamento no Brasil e as nossas
+                atitudes diárias impactam o mundo.</p>
+            <div class="hero-buttons">
+                <a href="brasil.html" class="btn-primary">Ver Dados do Brasil <i class="bi bi-arrow-right-short"></i></a>
+                <a href="reciclagem.html" class="btn-secondary">Como Ajudar?</a>
+                <div class="scroll-indicator">
+                    <div class="mouse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Quiz Section -->
+    <section class="section bg-darker quiz" id="quiz">
+        <div class="container text-center">
+            <h2 class="fade-in-up">Teste Seus <span class="highlight-text">Conhecimentos</span></h2>
+            <p class="fade-in-up">Descubra o quanto você sabe sobre sustentabilidade e os assuntos abordados.</p>
+            
+            <div class="quiz-container glass-card fade-in-up" id="quiz-container">
+                <div id="quiz-start">
+                    <button class="btn-primary" id="start-quiz-btn">Iniciar Quiz</button>
+                </div>
+                
+                <div id="quiz-question" style="display: none;">
+                    <h3 id="question-text" class="mb-3"></h3>
+                    <div class="quiz-options" id="quiz-options">
+                        <!-- Options will be appended here -->
+                    </div>
+                    <div id="quiz-feedback" class="mt-2" style="display:none; font-weight: bold;"></div>
+                </div>
+
+                <div id="quiz-result" style="display: none;">
+                    <h3 class="accent-green">Quiz Concluído!</h3>
+                    <p>Você acertou <span id="score-text" class="highlight-text" style="font-size: 1.5rem"></span> de <span id="total-questions"></span> perguntas.</p>
+                    <button class="btn-outline mt-3" id="restart-quiz-btn">Tentar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Team Section -->
+    <footer class="footer" id="equipe">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="bi bi-tree-fill"></i> Eco<span>Consciente</span>
+                    </a>
+                    <p>Desenvolvido para inspirar mudanças e disseminar conhecimento sobre a crise climática. Projeto
+                        acadêmico sem fins lucrativos.</p>
+                </div>
+
+                <div class="footer-team">
+                    <h4>Equipe do Projeto</h4>
+                    <div class="team-list">
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Luan Augusto</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Matheus Laham</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Luís Henrique</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Gabriel Trevisan</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Enzo Green</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Enzo Henrique</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Rafael Delfino</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Projeto EcoConsciente. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart.js and Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

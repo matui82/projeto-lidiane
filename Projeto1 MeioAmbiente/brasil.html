@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConsciente | O Caso Brasil</title>
+    <meta name="description" content="Aprofundamento sobre os biomas brasileiros, o desmatamento na Amazônia e as queimadas no Cerrado e Pantanal.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="bi bi-tree-fill"></i> Eco<span>Consciente</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-home">Home</a>
+                <a href="aquecimento.html">Aquecimento</a>
+                <a href="brasil.html" class="text-green">O Caso Brasil</a>
+                <a href="reciclagem.html">Reciclagem</a>
+                <a href="#equipe" class="btn-outline">Nossa Equipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Interno -->
+    <section class="hero" style="min-height: 50vh; padding-top: 150px;">
+        <div class="container hero-content fade-in-up">
+            <span class="badge" style="border-color: var(--accent-orange); color: var(--accent-orange)">Foco Nacional</span>
+            <h1>O Caso <span class="highlight-text" style="background: linear-gradient(135deg, var(--accent-yellow), var(--primary-green)); -webkit-background-clip: text; background-clip: text;">Brasil</span></h1>
+            <p>O Brasil possui a maior biodiversidade do mundo, mas nossos biomas enfrentam ameaças sem precedentes que impactam todo o clima global.</p>
+        </div>
+    </section>
+
+    <!-- Brazil Context Section 1: Amazon -->
+    <section class="section brasil bg-darker" id="amazonia">
+        <div class="container section-grid reverse-grid align-center">
+            <div class="section-visual slide-in-left glass-panel">
+                <h3 class="chart-title">Desmatamento da Amazônia (km²) <br><span>Fonte: INPE (PRODES)</span></h3>
+                <div class="chart-container">
+                    <canvas id="deforestationChart"></canvas>
+                </div>
+            </div>
+            <div class="section-text slide-in-right">
+                <h2>A <span class="accent-green">Amazônia</span> e o Clima Global</h2>
+                <p>Nossas florestas são os grandes escudos do planeta contra o aquecimento global. A Amazônia sozinha armazena bilhões de toneladas de carbono.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="bi bi-fire text-orange"></i>
+                        <div>
+                            <strong>Danos Irreversíveis</strong>
+                            <span>Cientistas alertam que se o desmatamento atingir cerca de 20 a 25%, a floresta perderá a capacidade de se sustentar, transformando-se gradualmente em uma savana e liberando milhares de toneladas de CO2.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-cloud-rain text-blue"></i>
+                        <div>
+                            <strong>Rios Voadores</strong>
+                            <span>A destruição afeta diretamente o regime de chuvas em toda a América do Sul. A umidade gerada pela floresta é o motor hídrico do continente, garantindo a agricultura e o abastecimento das cidades.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brazil Context Section 2: Cerrado -->
+    <section class="section" id="cerrado">
+         <div class="container section-grid align-center">
+            <div class="section-text slide-in-left">
+                <h2>O <span class="accent-orange">Cerrado</span>:<br>O Berço das Águas</h2>
+                <p>Frequentemente ofuscado pela Amazônia, o Cerrado é a savana mais biodiversa do mundo e a caixa d'água do Brasil, abrigando as nascentes das três maiores bacias hidrográficas da América do Sul.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="bi bi-tree text-green"></i>
+                        <div>
+                            <strong>Floresta Invertida</strong>
+                            <span>Com raízes que podem atingir dezenas de metros, as plantas do Cerrado armazenam carbono debaixo da terra e infiltram a água para os lençóis freáticos.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-exclamation-triangle text-red"></i>
+                        <div>
+                            <strong>Ameaça do Agronegócio</strong>
+                            <span>Metade da vegetação original do Cerrado já foi desmatada, em grande parte pela expansão desenfreada da fronteira agrícola para o cultivo de soja e criação de gado.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-visual slide-in-right glass-panel" style="display: flex; align-items: center; justify-content: center; background: rgba(255,149,0,0.05); border-color: rgba(255,149,0,0.2)">
+                <div style="text-align: center; padding: 2rem">
+                    <i class="bi bi-droplet-half text-orange" style="font-size: 4rem; display: block; margin-bottom: 1rem"></i>
+                    <h3 style="color: var(--accent-orange); font-size: 3rem; margin-bottom: 0.5rem">50%</h3>
+                    <p style="color: var(--text-secondary)">Da vegetação original já foi perdida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brazil Context Section 3: Pantanal e Queimadas -->
+    <section class="section bg-darker" id="pantanal">
+        <div class="container text-center fade-in-up">
+            <h2>As Queimadas no <span class="accent-red">Pantanal</span></h2>
+            <p style="max-width: 800px; margin: 0 auto 3rem; color: var(--text-secondary)">O Pantanal, a maior planície alagável do mundo, tem sofrido com secas extremas e incêndios devastadores provocados pela ação humana combinada com as mudanças climáticas.</p>
+            
+            <div class="cards-grid">
+                <div class="glass-card">
+                    <div class="card-icon text-red"><i class="bi bi-thermometer-sun"></i></div>
+                    <h3>Secas Históricas</h3>
+                    <p>A diminuição dos Rios Voadores afeta diretamente as chuvas no bioma, deixando-o extremamente seco e vulnerável à propagação rápida do fogo.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon text-orange"><i class="bi bi-fire"></i></div>
+                    <h3>Ação Humana</h3>
+                    <p>Muitos dos incêndios começam pela ação do homem, de forma irregular para limpeza de pastagens, que perdem o controle.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon text-yellow"><i class="bi bi-bug"></i></div>
+                    <h3>Perda de Biodiversidade</h3>
+                    <p>Milhões de animais perdem seu habitat ou morrem carbonizados durante as frentes de fogo destrutivas todos os anos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Team Section -->
+    <footer class="footer" id="equipe">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="bi bi-tree-fill"></i> Eco<span>Consciente</span>
+                    </a>
+                    <p>Desenvolvido para inspirar mudanças e disseminar conhecimento sobre a crise climática. Projeto acadêmico sem fins lucrativos.</p>
+                </div>
+                
+                <div class="footer-team">
+                    <h4>Equipe do Projeto</h4>
+                    <div class="team-list">
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Luan Augusto</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Matheus Laham</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Luís Henrique</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Gabriel Trevisan</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Enzo Green</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Enzo Henrique</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Rafael Delfino</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Projeto EcoConsciente. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart.js and Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConsciente | Aquecimento Global</title>
+    <meta name="description" content="Entenda o alerta vermelho do aquecimento global e as emissões de dióxido de carbono.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="bi bi-tree-fill"></i> Eco<span>Consciente</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-home">Home</a>
+                <a href="aquecimento.html" class="text-green">Aquecimento</a>
+                <a href="brasil.html">O Caso Brasil</a>
+                <a href="reciclagem.html">Reciclagem</a>
+                <a href="#equipe" class="btn-outline">Nossa Equipe</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Interno -->
+    <section class="hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 2rem;">
+        <div class="container hero-content fade-in-up">
+            <span class="badge" style="border-color: var(--accent-red); color: var(--accent-red)">Crise Climática</span>
+            <h1>O <span class="highlight-text" style="background: linear-gradient(135deg, var(--accent-red), var(--accent-orange)); -webkit-background-clip: text; background-clip: text;">Aquecimento</span> Global</h1>
+            <p>Descubra as causas, o acúmulo de carbono e de que forma podemos mitigar essa tendência alarmante para salvar nosso futuro.</p>
+        </div>
+    </section>
+
+    <!-- Global Warming Section 1: O Efeito Estufa -->
+    <section class="section aquecimento" id="mecanica" style="padding-top: 2rem;">
+        <div class="container section-grid align-center">
+            <div class="section-text slide-in-left">
+                <h2>A Mecânica do <br><span class="accent-orange">Efeito Estufa</span></h2>
+                <p>O efeito estufa é um fenômeno natural essencial para a vida, mas a ação humana o intensificou a níveis perigosos. Gases como o Dióxido de Carbono (CO₂) e o Metano (CH₄) atuam como um cobertor térmico para o mundo todo.</p>
+                <ul class="feature-list">
+                    <li>
+                        <i class="bi bi-sun text-yellow"></i>
+                        <div>
+                            <strong>Radiação Solar</strong>
+                            <span>A luz do sol entra na atmosfera e aquece a superfície da Terra diariamente.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="bi bi-cloud-haze2 text-red"></i>
+                        <div>
+                            <strong>O Bloqueio do Calor</strong>
+                            <span>Ao invés de retornar para o vácuo espacial, o calor emitido pela Terra é retido pelos gases do efeito estufa, desestabilizando as correntes de ar e a temperatura marítima.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-visual slide-in-right glass-panel">
+                <h3 class="chart-title">Emissões de CO₂ (Bilhões de Toneladas)</h3>
+                <div class="chart-container">
+                    <canvas id="co2Chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Warming Section 2: Acordo de Paris -->
+    <section class="section bg-darker" id="acordo">
+        <div class="container section-grid reverse-grid align-center">
+            <div class="section-visual slide-in-left glass-panel" style="display: flex; align-items: center; justify-content: center; background: rgba(10,132,255,0.05); border-color: rgba(10,132,255,0.2)">
+                <div style="text-align: center; padding: 2rem">
+                    <h3 style="color: var(--accent-red); font-size: 3rem; margin-bottom: 0.5rem">1.5°C</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem">Limite climático global de segurança máxima</p>
+                    <h3 style="color: darkred; font-size: 3rem; margin-bottom: 0.5rem">2.0°C</h3>
+                    <p style="color: var(--text-secondary)">Ponto de colapso irreversível na vida no ecossistema</p>
+                </div>
+            </div>
+            <div class="section-text slide-in-right">
+                <h2>O <span class="accent-blue">Acordo de Paris</span></h2>
+                <p>Assinado por nações globais em 2015, este tratado histórico busca manter o limite do aquecimento abaixo dos 2°C, preferencialmente cravado em 1.5°C acima dos níveis pré-industriais.</p>
+                <div class="stats-card" style="border-color: var(--accent-blue); background: rgba(10,132,255,0.1)">
+                    <div class="stat-item">
+                        <i class="bi bi-globe text-blue"></i>
+                        <h4>Impacto Vital</h4>
+                        <span>A escalada de "apenas" meio grau (de 1.5°C até 2°C) resultaria no apagamento total e irreversível de áreas litorâneas e de recifes de coral na terra.</span>
+                    </div>
+                </div>
+                <p>Se ultrapassarmos 2°C de elevação, centenas de milhões de pessoas enfrentarão de forma dramática a pobreza extrema somada aos mais inimagináveis riscos climáticos da civilização.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Warming Section 3: Consequencias -->
+    <section class="section" id="consequencias">
+        <div class="container text-center fade-in-up">
+            <h2>As <span class="accent-red">Consequências</span> Fatais</h2>
+            <p style="max-width: 800px; margin: 0 auto 3rem; color: var(--text-secondary)">Sem uma forte redução da agressão por nossa matriz energética, o planeta será refém de sequelas climáticas.</p>
+            
+            <div class="cards-grid">
+                <div class="glass-card">
+                    <div class="card-icon text-blue"><i class="bi bi-water"></i></div>
+                    <h3>Elevação Litoral Oceânica</h3>
+                    <p>O rápido degelo glacial da calota ártica da Groenlândia submerge e destrói cidades costeiras e ilhas por completo, gerando migração em massa.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon text-orange"><i class="bi bi-thermometer-high"></i></div>
+                    <h3>Eventos Extremos</h3>
+                    <p>As sufocantes ondas de calor, ciclones, furacões e a seca implacável tornam-se recorrentes, prejudicando a agricultura global de cereais.</p>
+                </div>
+                <div class="glass-card">
+                    <div class="card-icon text-green"><i class="bi bi-droplet"></i></div>
+                    <h3>Acidificação Marinha</h3>
+                    <p>O oceano, tentando equilibrar o imenso CO2 capturado, eleva demais a sua acidez, dissolvendo de vez as conchas protetoras de todos os corais e animais aquáticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Team Section -->
+    <footer class="footer" id="equipe">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="bi bi-tree-fill"></i> Eco<span>Consciente</span>
+                    </a>
+                    <p>Desenvolvido para inspirar mudanças e disseminar conhecimento sobre a crise climática. Projeto acadêmico sem fins lucrativos.</p>
+                </div>
+                
+                <div class="footer-team">
+                    <h4>Equipe do Projeto</h4>
+                    <div class="team-list">
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Luan Augusto</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Matheus Laham</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Luís Henrique</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Gabriel Trevisan</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Enzo Green</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Enzo Henrique</div>
+                        <div class="team-member"><i class="bi bi-person-circle"></i> Rafael Delfino</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Projeto EcoConsciente. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart.js and Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
