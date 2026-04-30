@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (logoMenuBtn && navLinks) {
         logoMenuBtn.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 820) {
                 e.preventDefault(); // Prevent navigating instantly on mobile
                 navLinks.classList.toggle('active');
                 
