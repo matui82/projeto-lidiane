@@ -1,30 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Navbar Scroll Effect ---
+    // --- Navbar Scroll Effect & Mobile Animation ---
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
+    const hero = document.getElementById('home');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+
+    function updateScroll() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
 
-    // --- Mobile Menu Toggle via Logo ---
+        // Mobile header animation calculation
+        if (window.innerWidth <= 820 && hero) {
+            const heroHeight = hero.offsetHeight;
+            let scrollProgress = window.scrollY / heroHeight;
+            if (scrollProgress > 1) scrollProgress = 1;
+            if (scrollProgress < 0) scrollProgress = 0;
+            
+            navbar.style.setProperty('--scroll-progress', scrollProgress);
+            if (mobileMenuBtn) {
+                mobileMenuBtn.style.pointerEvents = scrollProgress < 0.1 ? 'none' : 'auto';
+            }
+        } else {
+            navbar.style.removeProperty('--scroll-progress');
+            if (mobileMenuBtn) {
+                mobileMenuBtn.style.pointerEvents = 'auto';
+            }
+        }
+    }
+
+    window.addEventListener('scroll', updateScroll);
+    window.addEventListener('resize', updateScroll);
+    updateScroll(); // Initialize on load
+
+    // --- Mobile Menu Toggle ---
     const logoMenuBtn = document.querySelector('.logo');
     const navLinks = document.getElementById('nav-links');
     const treeIcon = logoMenuBtn ? logoMenuBtn.querySelector('i') : null;
 
-    if (logoMenuBtn && navLinks) {
-        logoMenuBtn.addEventListener('click', (e) => {
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
             if (window.innerWidth <= 820) {
-                e.preventDefault(); // Prevent navigating instantly on mobile
                 navLinks.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
                 
                 if (navLinks.classList.contains('active')) {
-                    treeIcon.style.transform = 'rotate(180deg)';
+                    if (treeIcon) treeIcon.style.transform = 'rotate(180deg)';
                 } else {
-                    treeIcon.style.transform = 'rotate(0deg)';
+                    if (treeIcon) treeIcon.style.transform = 'rotate(0deg)';
                 }
             }
         });
@@ -33,9 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
                 if (treeIcon) treeIcon.style.transform = 'rotate(0deg)';
             });
         });
+
+        // Close mobile menu when clicking the logo
+        if (logoMenuBtn) {
+            logoMenuBtn.addEventListener('click', () => {
+                if (window.innerWidth <= 820 && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                    if (treeIcon) treeIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+        }
     }
 
     // --- Quiz Logic ---
