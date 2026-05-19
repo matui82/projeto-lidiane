@@ -321,7 +321,7 @@ h2 {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.35);
     transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(0, 210, 106, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px #0d0d0d, inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .btn-glass i {
@@ -1116,13 +1116,69 @@ h2 {
     }
 }
 
+/* Hamburger Button */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background var(--transition-fast);
+    z-index: 101;
+}
+
+.hamburger-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hamburger-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transform-origin: center;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.35s ease,
+                width 0.35s ease;
+}
+
+/* X state when menu is open */
+.hamburger-btn.is-open .hamburger-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn.is-open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+.hamburger-btn.is-open .hamburger-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 820px) {
     .nav-container {
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        opacity: var(--burger-opacity, 1);
+        pointer-events: var(--burger-pointer, auto);
+        transition: opacity 0.1s linear;
     }
 
     .logo {
-        cursor: pointer;
+        cursor: default;
+        /* Smoothly shift from center (hero top) to left (scrolled) */
+        transform: translateX(
+            calc((1 - var(--logo-shift, 1)) * (50vw - 50% - 2rem))
+        );
+        transition: transform 0.1s linear;
     }
 
     .nav-links {
